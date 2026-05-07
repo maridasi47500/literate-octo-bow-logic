@@ -4,6 +4,18 @@ class SevcikLogicEngine:
     def __init__(self):
         self.pos_actuelle = 0.0  # 0=Talon, 1=Pointe
         self.derniere_note_physique = None
+def test_de_logique(script):
+    # Cas test : Noire, Tout l'archet, Forte, Pointe
+    res = script.analyser('c4\downbow^"Sp."^"WB"\\f')
+    
+    # Vérifications logiques :
+    assert "Pression" in str(res) and "Index" in str(res) # Doit conseiller l'index à la pointe
+    assert "Chevalet" in str(res)                        # Doit conseiller le chevalet pour un Forte
+    
+    # Cas test : Croche, Tout l'archet (Vitesse rapide)
+    res2 = script.analyser('c8\downbow^"WB"')
+    # Doit dire d'appuyer MOINS que pour la noire
+    # ...
     def logique_pression_physique(position_val, nuance):
         """
         Position : 0.0 (Talon) à 1.0 (Pointe)
