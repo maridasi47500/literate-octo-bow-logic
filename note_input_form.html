@@ -1,0 +1,50 @@
+<form id="noteInputForm">
+  <fieldset>
+    <legend>Configuration de la Note / Groupe</legend>
+    
+    <div class="field-group">
+      <input type="text" id="pitch" placeholder="Pitch (ex: c'')">
+      <input type="text" id="duration" placeholder="Durée (ex: 4, 8, 16)">
+      <input type="text" id="finger" placeholder="Fingering (ex: 1, 2)">
+      <input type="text" id="dynamic" placeholder="Nuance (ex: \p, \f)">
+    </div>
+
+    <div class="field-group">
+      <label>Archet :</label>
+      <select id="division">
+        <option value="G">G (Grand Archet)</option>
+        <option value="1/2B">1/2 B (Moitié)</option>
+        <option value="1/3B">1/3 B (Tiers)</option>
+        <option value="1/4B">1/4 B (Quart)</option>
+      </select>
+      
+      <select id="position">
+        <option value="fr">Talon (fr)</option>
+        <option value="M">Milieu (M)</option>
+        <option value="M*">Milieu Équilibre (M*)</option>
+        <option value="Sp">Pointe (Sp)</option>
+      </select>
+    </div>
+
+    <div class="field-group">
+      <label>Articulation :</label>
+      <select id="articulation">
+        <option value="none">Aucune</option>
+        <option value="spiccato">Spiccato (50/50)</option>
+        <option value="staccato">Staccato (75/25)</option>
+      </select>
+    </div>
+
+    <div class="field-group">
+      <input type="checkbox" id="startSlur"> Début Liaison
+      <input type="checkbox" id="endSlur"> Fin Liaison
+    </div>
+
+    <button type="button" onclick="ajouterNote()">Enregistrer la Note</button>
+  </fieldset>
+</form>
+
+<div id="listeNotes">
+  <h3>Séquence Musicale</h3>
+  <ul id="noteDisplay"></ul>
+</div>

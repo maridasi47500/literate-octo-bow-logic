@@ -1,0 +1,28 @@
+<div class="note-entry">
+    <h3>Note n°1</h3>
+    <label>Note LilyPond :</label> <input type="text" name="note[]" placeholder="c''8">
+    
+    <label>Articulation :</label>
+    <select name="articulation[]">
+        <option value="nat">Naturelle</option>
+        <option value="staccato">Staccato (\staccato)</option>
+        <option value="spiccato">Spiccato</option>
+        <option value="staccatissimo">Staccatissimo (\stacatissimo)</option>
+        <option value="tenuto">Tenuto (\tenuto)</option>
+    </select>
+
+    <label>Logique Ševčík :</label>
+    <select name="sevcik[]">
+        <option value="G">G (Tout l'archet = 1)</option>
+        <option value="H">H (Moitié = 1/2)</option>
+        <option value="uH">uH (Inférieur = 1/2)</option>
+        <option value="oH">oH (Supérieur = 1/2)</option>
+        <option value="1/3B">1/3B (Tiers = 1/3)</option>
+        <option value="M">M (Milieu = 1/3)</option>
+        <option value="Sp">Sp (Pointe = 1/3)</option>
+        <option value="M*">M* (M -> Sp -> Talon)</option>
+    </select>
+
+    <label><input type="checkbox" name="liaison_start[]"> Début Liaison</label>
+    <label><input type="checkbox" name="liaison_end[]"> Fin Liaison</label>
+</div>
