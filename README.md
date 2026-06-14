@@ -5,7 +5,7 @@
 - tu te souviens de la logique de l'archet de sevcik?
 ![alt text](picbow1.png)
 
-Scrust lilypond qui prend en entrée les notes le tire poussé les 
+ - Script lilypond qui prend en entrée les notes le tire poussé les 
 
 staccato les 1/3 toutes notation lilypond de cil et donner toutes les 
 
