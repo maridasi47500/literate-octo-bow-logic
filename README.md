@@ -1,3 +1,8 @@
+# bienvenue dans Literate Octo Bow Logique ou Logique de l'archet
+
+- lance le script python : logique_de_larchet_longueur_archet.py ou logique_de_larchet_staccato.py
+- ou logique_de_larchet.py
+
 Scrust lilypond qui prend en entrée les notes le tire poussé les 
 
 staccato les 1/3 toutes notation lilypond de cil et donner toutes les 
