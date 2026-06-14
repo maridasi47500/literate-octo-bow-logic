@@ -2,6 +2,8 @@
 
 - lance le script python : logique_de_larchet_longueur_archet.py ou logique_de_larchet_staccato.py
 - ou logique_de_larchet.py
+- tu te souviens de la logique de l'archet de sevcik?
+![alt text](picbow1.png)
 
 Scrust lilypond qui prend en entrée les notes le tire poussé les 
 
