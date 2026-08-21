@@ -1,5 +1,30 @@
 # bienvenue dans Literate Octo Bow Logique ou Logique de l'archet
 
+- Séparer la métrique temporelle (BPM et solfège) de la physique du geste (vitesse de l'archet) rend le modèle algorithmique plus réaliste : la vitesse physique de l'archet devient le résultat de la longueur divisée par la durée réelle en secondes.
+
+$$3 \times 4 \times 3 \times 3 \times 3 \times 2 \times 2 \times 2 \times 3 = 23\,328$$
+
+| Variable | Valeurs possibles | Nombre |
+| --- | --- | --- |
+| **Position de départ** | Talon, Milieu, Pointe | 3 |
+| **Longueur d'archet utilisée** | Tout l'archet (WB), 1/2, 1/3, 1/4 | 4 |
+| **Durée de note (solfège)** | Ronde, Noire, Croche | 3 |
+| **Tempo du morceau (BPM)** | Lent (60), Moyen (100), Rapide (140) | 3 |
+| **Vitesse d'archet physique** | Lente (ex: $5\text{ cm/s}$), Modérée ($20\text{ cm/s}$), Rapide ($50+\text{ cm/s}$) | 3 |
+| **Nuances (Pression de base)** | Forte, Piano | 2 |
+| **Cordes** | Corde grave (ex. Sol/Ut), Corde aiguë (ex. Mi/La) | 2 |
+| **Point de contact** | Près du chevalet, Loin du chevalet (sur la touche) | 2 |
+| **Hauteur sur le manche** | Bas du manche (1ère pos.), Milieu, Haut du manche | 3 |
+
+**Formule algorithmique découlant de ce découpage :**
+
+
+$$\text{Durée réelle (s)} = \frac{60}{\text{BPM}} \times \text{Valeur de note}$$
+
+$$\text{Vitesse archet calculée} = \frac{\text{Longueur utilisée (cm)}}{\text{Durée réelle (s)}}$$
+
+Cette distinction génère **23 328 combinaisons**. Elle permet de tester des cas limites physiques où la vitesse calculée entre en conflit direct avec le point de contact ou la nuance demandée (ex: très grande longueur d'archet sur une croche à 140 BPM).
+
 - lance le script python : logique_de_larchet_longueur_archet.py ou logique_de_larchet_staccato.py
 - ou logique_de_larchet.py
 - tu te souviens de la logique de l'archet de sevcik?
