@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block montitre %}
+debut de mes mots: bienvenue dans octo bow logic
+{% endblock %}
+{% block content %}
+<h1># literate-octo-bow-logic</h1>
+{% for x in users | reverse %}
+ <li>{{ x["first_name"]  }}</li>
+
+{% endfor %} 
+fin de mes mots : dis la longueur darchet en nombre comme 1/3, 1/2, etc. en code comme oH (moitie superieure) H, (moitie) Sp(Pointe 1/3) ou en centimetres
+, remplis les champ, ajoute la description de quelle est la meilleur solution
+{% endblock %}
+{% block liens %}
+<a href="/">welcome</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}{% block content %}<form  enctype="multipart/form-data" method="POST">
+<div class="field"><label for="somefieldbow_logicposition_de_depart">position_de_depart</label><input type="text" id="somefieldbow_logicposition_de_depart" name="position_de_depart"/></div>
+<div class="field"><label for="somefieldbow_logiclongueur_archet">longueur_archet</label><input type="text" id="somefieldbow_logiclongueur_archet" name="longueur_archet"/></div>
+<div class="field"><label for="somefieldbow_logicduree_de_note">duree_de_note</label><input type="textarea" id="somefieldbow_logicduree_de_note" name="duree_de_note"/></div>
+<div class="field"><label for="somefieldbow_logicpic">pic</label><input type="text" id="somefieldbow_logicpic" name="pic"/></div>
+<div class="field"><label for="somefieldbow_logictime_signature">time_signature</label><input type="text" id="somefieldbow_logictime_signature" name="time_signature"/></div>
+<div class="field"><label for="somefieldbow_logickey_signature">key_signature</label><input type="text" id="somefieldbow_logickey_signature" name="key_signature"/></div>
+<div class="field"><label for="somefieldbow_logictempo">tempo</label><input type="text" id="somefieldbow_logictempo" name="tempo"/></div>
+<div class="field"><label for="somefieldbow_logicvitesse_archet">vitesse_archet</label><input type="text" id="somefieldbow_logicvitesse_archet" name="vitesse_archet"/></div>
+<div class="field"><label for="somefieldbow_logicnuances">nuances</label><input type="text" id="somefieldbow_logicnuances" name="nuances"/></div>
+<div class="field"><label for="somefieldbow_logiccorde">corde</label><input type="text" id="somefieldbow_logiccorde" name="corde"/></div>
+<div class="field"><label for="somefieldbow_logicdistance_chevalet">distance_chevalet</label><input type="text" id="somefieldbow_logicdistance_chevalet" name="distance_chevalet"/></div>
+<div class="field"><label for="somefieldbow_logicposition_manche">position_manche</label><input type="text" id="somefieldbow_logicposition_manche" name="position_manche"/></div>
+<div class="field"><label for="somefieldbow_logicdescription">description</label><input type="text" id="somefieldbow_logicdescription" name="description"/></div><div class="actions"><input type="submit"/></div></form>{% for x in bow_logics %}{{x["position_de_depart"] }}{% endfor %}{% endblock %}{% block liens %}<a href="/">bienvenue</a><a href="/add_one_bow_logic"> add one bow_logic</a>{% endblock %}
